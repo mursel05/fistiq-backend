@@ -1,0 +1,13 @@
+import { ObjectType, Field } from '@nestjs/graphql';
+
+@ObjectType()
+export class MutationResponse {
+  @Field()
+  success: boolean;
+
+  @Field({ nullable: true })
+  message?: string;
+
+  @Field()
+  timestamp: string;
+}
